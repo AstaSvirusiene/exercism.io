@@ -23,8 +23,18 @@ describe('twoFer()', () => {
 
 This function can be improved further with these things.
 
-1/ You can have a read about default parameter in JavaScript and apply in twoFer method.
+1/ You can have a read about default parameter in JavaScript and apply in twoFer method. */
 
-2/ You can have a read about template literals in Javascript. We shouldn't repeat the string twice, 
+function twoFer(name="you")
+{
+   return  "One for " +  name + ", one for me.";
+   
+};
+
+/*2/ You can have a read about template literals in Javascript. We shouldn't repeat the string twice, 
 there is one thing we need to replace is name variable. So we only need to figure out what is the correct 
 value of name and pass it into the string we have. */
+
+function twoFer(name = "you") {
+  return `One for ${name}, one for me.`
+};
